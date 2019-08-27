@@ -57,7 +57,7 @@ export default class Spending extends Component {
      
         //mudo o display do cardresult para que possa criar um efeito na tela quando o usuário calcular várias vezes, pra ele perceber que ta mudando os resultados. 
         if (this.card) {
-            setTimeout(() => { this.card.style.display = 'block';}, 1000);
+            setTimeout(() => { this.card.style.display = 'block';}, 1500);
             this.card.style.display = 'none';
         }
     }
