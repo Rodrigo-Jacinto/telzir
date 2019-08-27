@@ -36,7 +36,7 @@ export default class Spending extends Component {
         }
         else {
             //se nenhuma das condições acima for true, então significa que o DDD 011 foi selecionado, então deve mostrar os outros DDD's no destino
-            this.setState({ optionsDDestino: ['016', '017', '018']});
+            this.setState({ optionsDDestino: ['016', '017', '018'] });
         }
     }
 
@@ -44,20 +44,26 @@ export default class Spending extends Component {
 
         event.preventDefault();
 
-        let ddOrigem = Number(this.inputOrigem.value);
-        let ddDestino = Number(this.inputDestino.value);
-        let planoFaleMais = Number(this.inputPlano.value);
-        let minutos = Number(this.minutos.value);
+        if (Number(this.minutos.value) > 0) {
+            
+            let ddOrigem = Number(this.inputOrigem.value);
+            let ddDestino = Number(this.inputDestino.value);
+            let planoFaleMais = Number(this.inputPlano.value);
+            let minutos = Number(this.minutos.value);
 
-        let valorFaleMais = calculoPlanoFaleMais(minutos, planoFaleMais, ddOrigem, ddDestino);
-        let valorNormal = calculoPlanoNormal(minutos, ddOrigem, ddDestino);
+            let valorFaleMais = calculoPlanoFaleMais(minutos, planoFaleMais, ddOrigem, ddDestino);
+            let valorNormal = calculoPlanoNormal(minutos, ddOrigem, ddDestino);
 
-        let objetoParametros = { ddOrigem, ddDestino, minutos, planoFaleMais, valorFaleMais, valorNormal }
-        this.setState({ paramsUser: [objetoParametros] });
-     
+            let objetoParametros = { ddOrigem, ddDestino, minutos, planoFaleMais, valorFaleMais, valorNormal }
+            this.setState({ paramsUser: [objetoParametros] });
+        }
+        else {
+            alert("No campo minutos, apenas digite valores positivos maiores do que zero!");
+        }
+
         //mudo o display do cardresult para que possa criar um efeito na tela quando o usuário calcular várias vezes, pra ele perceber que ta mudando os resultados. 
         if (this.card) {
-            setTimeout(() => { this.card.style.display = 'block';}, 1500);
+            setTimeout(() => { this.card.style.display = 'block'; }, 1500);
             this.card.style.display = 'none';
         }
     }
@@ -100,7 +106,7 @@ export default class Spending extends Component {
                                     {
                                         this.state.optionsDDestino.map(optionValue => {
                                             return (
-                                                <option  key={optionValue} value={optionValue}>{optionValue}</option>
+                                                <option key={optionValue} value={optionValue}>{optionValue}</option>
                                             )
                                         })
                                     }
