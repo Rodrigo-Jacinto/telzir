@@ -1,0 +1,133 @@
+body {
+    background: rgb(248, 245, 245);
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .anim-enter {
+    opacity: 0.01;
+  }
+   
+  .anim-enter.anim-enter-active {
+    opacity: 2;
+    transition: opacity 5s ease-in;
+  }
+
+  .leave {
+      opacity: 2;
+  }
+
+  .leave .leave-active {
+    opacity: 2;
+    transition: opacity 5s ease-in;
+  }
+
+
+.bg-header-spending {
+    background: #000;
+}  
+
+.header-menu-spending {
+    width: 280px;
+    padding-top: 15px; 
+    float: right;
+  }
+
+
+.header-menu-spending ul {
+    margin: 0;
+    padding:0;
+}
+
+.header-menu-spending ul li {
+    list-style: none;
+    color: #227cc2;
+    font-size:14px;
+    display:inline-block;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding:10px;
+}
+
+.pesquisa {
+    background: #fff;
+    box-shadow: 0px 0px 10px rgb(145, 138, 138);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.btn-busca {
+    border: 3px solid #227cc2;
+    color:#227cc2;
+    background:none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    padding: 5px 8px;
+    width: 170px;
+  
+}
+
+.btn-busca:hover {
+    background:#227cc2;
+    color:#fff;
+}
+
+.result-spending {
+    width: 345px;
+}
+
+.result-spending h3 {
+    color:#fff;
+    font-weight: bold;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.result-spending .card-header {
+    background:#227cc2;
+
+}
+.result-spending .card-body {
+    padding-top: 5px;
+    padding-bottom: 0; 
+}
+
+.result-spending ul {
+    padding: 0;
+}
+
+.result-spending ul li {
+    list-style-type: none;
+    margin-top: 10px;
+}
+.result-spending ul li span {
+
+    color:#227cc2;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .bg-size-mobile {
+        height: 120px;
+    }
+
+    .header-menu-spending {
+        padding-top: 0;
+        width: 90px;
+    }
+
+    .header-menu-spending ul li {
+        display:block;
+    }
+    
+    .result-spending {
+        width: 100%;
+    }
+
+}

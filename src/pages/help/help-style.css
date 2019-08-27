@@ -1,0 +1,145 @@
+.bg-help {
+    background: rgb(248, 245, 245);
+
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+.bg-header-help {
+    background: #000;
+}  
+
+  .header-menu-help {
+      width: 280px;
+      padding-top: 15px; 
+      float: right;
+  }
+  
+  .header-menu-help ul {
+      margin: 0;
+      padding:0;
+  }
+  
+  .header-menu-help ul li {
+      list-style: none;
+      color: #227cc2;
+      font-size:14px;
+      display:inline-block;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding:10px;
+  }
+  
+
+.text-plano-normal p {
+    border-left: 8px solid #000;
+    padding-left: 12px;
+}
+
+.text-plano-plus p {
+    border-left: 8px solid #fff;
+    color: #fff;
+    padding-left: 12px;
+}
+  
+
+.btn-introducao {
+  
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .1em;
+    padding: 8px 12px;
+    width: 200px;
+    margin: 0 auto;
+    display:block;
+    margin-top: 25px;
+  
+}
+
+.btn-calcule {
+    border: 3px solid #227cc2;
+    color: #227cc2;
+}
+
+.btn-calcule-help:hover {
+    border: 3px solid #000;
+    color: #000;
+}
+
+
+.space-section {
+    margin-top: 80px;
+}
+
+.space-section .row h3{
+    padding:18px 0;
+    text-align:center;
+    font-weight:bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.space-section .space-title-normal {
+    margin-bottom: 30px;
+}
+
+.space-section .row h3::after{
+    content:"";
+    width: 90px;
+    height: 3px;
+    background: #000;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+.bg-plano-plus {
+    background: #227cc2;
+    padding-bottom: 12px;
+}
+
+.title-plano-plus h3 {
+    color: #fff;
+}
+
+.bg-plano-plus .row h3::after {
+    background: #fff;
+}
+
+.title-plano-table {
+    color:#227cc2;
+}
+
+.bg-plano-table {
+    padding-bottom: 35px;
+}
+
+.bg-plano-table .row h3::after {
+    background:#227cc2;
+}
+
+.bg-plano-table table {
+    background: #fff;
+    color: #227cc2;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .bg-size-mobile {
+        height: 120px;
+    }
+
+    .header-menu-help {
+        padding-top: 0;
+        width: 90px;
+    }
+
+    .header-menu-help ul li {
+        display:block;
+    }
+    
+
+}
